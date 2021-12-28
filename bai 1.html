@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in dãy fibonaci</title>
+</head>
+<body>
+<input type="text" id="text" placeholder="Nhập mảng vào đây: ">
+<button onclick="tinh()">Tính</button>
+<script>
+    function tinh() {
+        let str = document.getElementById("text").value;
+        let arr = str.split(',');
+        let soV = prompt("Nhập số V: ")
+        let count  = 0;
+        let index = -1;
+        let arr1 =[];
+        for (i = 0; i <arr.length; i++){
+            if (arr[i] === soV){
+                count++;
+                index = i;
+                arr1.push(i);
+            }
+        }
+        if (count = 0) {
+            document.write("số V không có ở trong mảng");
+        }else {
+            document.write("số V có ở trong mảng" + " và ở vị trí: " + arr1);
+        }
+    }
+
+</script>
+</body>
+</html>
